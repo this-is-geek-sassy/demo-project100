@@ -1,11 +1,15 @@
 <h2>List of products: </h2>
 <table border="1">
     <thead> <th>Name</th> <th>Price</th> <th>Image</th> </thead>
+    <!-- 2 importatnt conceepts:
+        i. directives (in-built)
+        ii. property binding
+        iii. event binding -->
     <tr *ngFor="let product of productList"> 
         <td>{{product.name}}</td>
         <td>{{product.price |currency:'INR'}}</td> 
-        <td><img [src]="product.imgpath" /> </td>
+        <td><img id="cover_image" [src]="product.imgpath" /> </td>
         <td><button>Add to cart</button></td>
-        <td *ngIf="isAdmin"><button>Delete</button></td>
+        <td *ngIf="isAdmin"><button (click)="delete(product.id)">Delete</button></td>
     </tr>
 </table>
