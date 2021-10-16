@@ -10,11 +10,12 @@ import { ProductsdataService } from '../productsdata.service';
 export class InventoryComponent implements OnInit {
 
   products!: Array<Product>;
-  constructor(pdataService: ProductsdataService) { 
-    this.products = pdataService.getProductList();
+  constructor(private pdataService: ProductsdataService) { 
+    // this.products = pdataService.getProductList();
   }
 
   ngOnInit(): void {
+    this.products = this.pdataService.getProductList();
   }
 
 }

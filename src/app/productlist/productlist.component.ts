@@ -13,14 +13,15 @@ export class ProductlistComponent implements OnInit {
   productList!: Array<Product>;
   isAdmin:boolean = true;
 
-  constructor(prdDataService : ProductsdataService) {
+  constructor(private prdDataService : ProductsdataService) {
     // refactor to fetch the data from a service/server side 
     //let prdDataService = new ProductsdataService();   // dependency 
-    this.productList = prdDataService.getProductList();  
+    // this.productList = prdDataService.getProductList();  
   }
 
   ngOnInit(): void {
     // invoke services
+    this.productList = this.prdDataService.getProductList();
   }
   delete(pid:number): void {
     // find the product by id and then delete that product element
