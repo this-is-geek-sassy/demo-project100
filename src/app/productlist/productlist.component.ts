@@ -5,16 +5,17 @@ import { ProductsdataService } from '../productsdata.service';
 @Component({
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
-  styleUrls: ['./productlist.component.css']
+  styleUrls: ['./productlist.component.css'],
+  providers: [{provide: ProductsdataService, useClass: ProductsdataService}]   // it can also be configured at module level
 })
 export class ProductlistComponent implements OnInit {
 
   productList!: Array<Product>;
   isAdmin:boolean = true;
 
-  constructor() {
+  constructor(prdDataService : ProductsdataService) {
     // refactor to fetch the data from a service/server side 
-    let prdDataService = new ProductsdataService();
+    //let prdDataService = new ProductsdataService();   // dependency 
     this.productList = prdDataService.getProductList();  
   }
 
