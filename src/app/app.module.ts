@@ -18,7 +18,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
-  declarations: [
+  declarations: [  // list of componenet which are part of this module 
     AppComponent,
     LoginComponent,
     ProductlistComponent,
@@ -32,13 +32,13 @@ import { CommonModule } from '@angular/common';
     UserlistComponent
   ],
   imports: [  //list of modules to be used by this module 
-    BrowserModule,
+    BrowserModule,  // internally also loads the core module 
     CommonModule,
     ReactiveFormsModule,
     AppRoutingModule, 
     FormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent]   // defines which is the root component 
 })
 export class AppModule { }
