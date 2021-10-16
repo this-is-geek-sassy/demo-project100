@@ -6,7 +6,7 @@ import { ProductsdataService } from '../productsdata.service';
   selector: 'app-productlist',
   templateUrl: './productlist.component.html',
   styleUrls: ['./productlist.component.css'],
-  providers: [{provide: ProductsdataService, useClass: ProductsdataService}]   // it can also be configured at module level
+  //providers: [{provide: ProductsdataService, useClass: ProductsdataService}]   // it can also be configured at module level
 })
 export class ProductlistComponent implements OnInit {
 

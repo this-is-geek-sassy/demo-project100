@@ -16,6 +16,8 @@ import { RegistrationComponent } from './registration/registration.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserlistComponent } from './userlist/userlist.component';
 import { CommonModule } from '@angular/common';
+import { ProductsdataService } from './productsdata.service';
+import { BigBasketDataServiceService } from './big-basket-data-service.service';
 
 @NgModule({
   declarations: [  // list of componenet which are part of this module 
@@ -38,7 +40,7 @@ import { CommonModule } from '@angular/common';
     AppRoutingModule, 
     FormsModule
   ],
-  providers: [],
+  providers: [{provide: ProductsdataService, useClass: BigBasketDataServiceService}],
   bootstrap: [AppComponent]   // defines which is the root component 
 })
 export class AppModule { }
