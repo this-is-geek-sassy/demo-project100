@@ -9,7 +9,7 @@ import { Product } from '../product';
 export class ProductlistComponent implements OnInit {
 
   productList!: Array<Product>;
-  isAdmin:boolean = false;
+  isAdmin:boolean = true;
 
   constructor() {
     this.productList = new Array<Product>();

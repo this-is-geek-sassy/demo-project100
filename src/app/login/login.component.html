@@ -1,6 +1,25 @@
-<h3>Login</h3>
-<form>
-    <div> <label for="">Username:</label> <input type="text" name="username" /> </div>
-    <div> <label for="">Enter password:</label> <input type="password" name="password" id="" /> </div>
+<h3 class="loginForm">
+    Login
+</h3>
+
+
+<form class="loginForm">
+    <div id="loginComponent_userName"> 
+        <label for="">
+            Username:
+        </label> 
+        <input type="text" name="username" [(ngModel)]="username" /> 
+    </div>
+    
+    <div id="loginComponent_password"> 
+        <label for="">
+            Enter password:
+        </label> 
+        <input type="password" name="password" id="" [(ngModel)]="password" /> 
+    </div>
+
     <div> <label></label> <button>Login</button> </div>
 </form>
+
+Username value in the class: {{username}}
+password value in the class: {{password}}

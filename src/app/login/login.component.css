@@ -1,0 +1,21 @@
+#loginComponent_userName {
+    margin: 10px auto;
+}
+
+#loginComponent_password{
+    margin: 10px auto;
+}
+
+.loginForm {
+    margin: auto;
+    border: 1px solid paleturquoise;
+    width: 30rem;    
+}
+
+form {
+    height: 7rem;
+}
+
+h3 {
+    height: 2rem;
+}
