@@ -8,8 +8,13 @@
 
 .loginForm {
     margin: auto;
-    border: 1px solid paleturquoise;
-    width: 30rem;    
+    border: 1px solid rgba(110, 34, 21, 0.411);
+    width: 30rem;   
+    height: auto; 
+}
+#loginForm2 {
+    border-top: 1px solid gainsboro;
+    
 }
 
 form {
