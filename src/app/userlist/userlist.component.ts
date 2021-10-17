@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user';
 import { UserServiceService } from '../user-service.service';
 
 @Component({
@@ -7,7 +8,7 @@ import { UserServiceService } from '../user-service.service';
   styleUrls: ['./userlist.component.css']
 })
 export class UserlistComponent implements OnInit {
-  userList!:Array<any>;
+  userList!:Array<User>;
 
   constructor(private userservice:UserServiceService) { 
 
