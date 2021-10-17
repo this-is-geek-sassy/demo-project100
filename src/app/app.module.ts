@@ -18,6 +18,7 @@ import { UserlistComponent } from './userlist/userlist.component';
 import { CommonModule } from '@angular/common';
 import { ProductsdataService } from './productsdata.service';
 import { BigBasketDataServiceService } from './big-basket-data-service.service';
+import { PriceUpdaterComponent } from './price-updater/price-updater.component';
 
 @NgModule({
   declarations: [  // list of componenet which are part of this module 
@@ -31,7 +32,8 @@ import { BigBasketDataServiceService } from './big-basket-data-service.service';
     PriceupdaterComponent,
     RegistrationComponent,
     UserdetailsComponent,
-    UserlistComponent
+    UserlistComponent,
+    PriceUpdaterComponent
   ],
   imports: [  //list of modules to be used by this module 
     BrowserModule,  // internally also loads the core module 

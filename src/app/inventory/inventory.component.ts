@@ -18,4 +18,12 @@ export class InventoryComponent implements OnInit {
     this.products = this.pdataService.getProductList();
   }
 
+  setNewPrice(newPrice:number, pid:number) {
+    for(var i=0; i<this.products.length; i++) {
+      if(this.products[i].id==pid){
+        this.products[i].price = newPrice;
+      }
+    }
+  }
+
 }

@@ -9,5 +9,10 @@
     <tr *ngFor="let product of products;">
         <td>{{product.name}}</td>
         <td>{{product.price  |currency:'INR'}}</td>
+        <td>
+            <app-priceupdater [pricevalue] = "product.price" (update)="setNewPrice($event, product.id)">
+                
+            </app-priceupdater>
+        </td>
     </tr>
 </table>
