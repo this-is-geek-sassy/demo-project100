@@ -1,1 +1,11 @@
-<p>userdetails works!</p>
+<h2>Userdetails component</h2>
+
+<div>
+    User details for {{userid}}
+    <br>
+    <ul>
+        <li *ngFor="let i of userdetails">{{i}}
+            <script>console.log(i)</script>
+        </li>
+    </ul>
+</div>

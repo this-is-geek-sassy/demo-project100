@@ -4,6 +4,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserlistComponent } from './userlist/userlist.component';
 
 const routes: Routes = [
@@ -29,7 +30,13 @@ const routes: Routes = [
   },
   {
     path: 'users',
-    component: UserlistComponent
+    component: UserlistComponent,
+    children: [  // this is how u add child routes 
+      {
+        path: 'userdetails/:id',
+        component: UserdetailsComponent
+      }
+    ]
   },
   {   // needs to be placed at the end 
     path: '**',
