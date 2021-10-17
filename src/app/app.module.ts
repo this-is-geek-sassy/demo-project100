@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -40,7 +41,8 @@ import { PriceUpdaterComponent } from './price-updater/price-updater.component';
     CommonModule,
     ReactiveFormsModule,
     AppRoutingModule, 
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [{provide: ProductsdataService, useClass: BigBasketDataServiceService}],
   bootstrap: [AppComponent]   // defines which is the root component 
