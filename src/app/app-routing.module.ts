@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InventoryComponent } from './inventory/inventory.component';
 import { LoginComponent } from './login/login.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductlistComponent } from './productlist/productlist.component';
 import { UserlistComponent } from './userlist/userlist.component';
 
@@ -29,6 +30,10 @@ const routes: Routes = [
   {
     path: 'users',
     component: UserlistComponent
+  },
+  {   // needs to be placed at the end 
+    path: '**',
+    component: PagenotfoundComponent
   }
 ];
 
