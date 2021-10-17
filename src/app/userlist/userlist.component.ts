@@ -20,4 +20,11 @@ export class UserlistComponent implements OnInit {
     }, error => console.log(error))
   }
 
+  addUser() {
+    this.userservice.addUser({name:'Amit', email:'amit44@gmail.com'}).subscribe(response => {
+      // display some acknowledgement to the end user
+      
+    });
+  }
+
 }

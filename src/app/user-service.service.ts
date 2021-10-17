@@ -19,4 +19,8 @@ export class UserServiceService {
     return this.http.get<User>('http://jsonplaceholder.typicode.com/users/'+id);
   }
 
+  addUser(userObj:any): Observable<any> {
+    return this.http.post('http://jsonplaceholder.typicode.com/users/', userObj);
+  }
+
 }
