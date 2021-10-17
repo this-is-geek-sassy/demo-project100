@@ -1,0 +1,11 @@
+div {
+    margin: 11px auto;
+}
+input {
+    width: 25rem;
+}
+
+form {
+    border: 0.1px solid rgba(134, 64, 56, 0.226);
+    width: 27rem;
+}

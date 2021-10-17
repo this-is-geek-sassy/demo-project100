@@ -4,6 +4,7 @@ import { InventoryComponent } from './inventory/inventory.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { ProductlistComponent } from './productlist/productlist.component';
+import { RegistrationComponent } from './registration/registration.component';
 import { UserdetailsComponent } from './userdetails/userdetails.component';
 import { UserlistComponent } from './userlist/userlist.component';
 
@@ -37,6 +38,10 @@ const routes: Routes = [
         component: UserdetailsComponent
       }
     ]
+  },
+  {
+    path: 'reg',
+    component: RegistrationComponent
   },
   {   // needs to be placed at the end 
     path: '**',

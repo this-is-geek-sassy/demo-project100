@@ -1,1 +1,53 @@
-<p>registration works!</p>
+<div>
+    <div>
+        <form action="">
+            <fieldset>
+                <legend>SignUP</legend>
+
+                <!-- Email block -->
+                <div class="form-group row">
+                    <label for="inputEmail">Email</label>
+                    <input class="col-sm-2 form-control-plantext" aria-describedby="emailHelp" ngModel #email="ngModel" type="email" name="email" id="inputEmail" placeholder="Email" required>
+                </div>
+                <div *ngIf="email.invalid&&email.touched">Email is invalid</div>
+
+                <!-- Password block -->
+                <div>
+                    <div class="form-group row">
+                        <label for="inputPassword">Password</label>
+                        <input class="col-sm-2 form-control-plantext" type="password" name="password" id="inputPassword" placeholder="password" required minlength="6" ngModel #pwd="ngModel">
+                    </div>
+                    <div *ngIf="pwd.invalid&&pwd.touched">Password is invalid</div>
+                </div>
+                <!-- Gender block -->
+                <div class="form-group row">
+                    <label for="selectGender">Gender</label>
+                    <select class="col-sm-2 form-control-plantext" name="gender" id="selectGender" aria-placeholder="male">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="others">Others</option>
+                    </select>
+                </div>
+
+                <!-- Country block -->
+                <div class="form-group row">
+                    <label for="inputCountry">Country</label>
+                    <input class="col-sm-2 form-control-plantext" type="text" name="country" id="inputCountry" placeholder="country">
+                </div>
+
+                <!-- code block -->
+                <div class="form-group row">
+                    <label for="inputCode">Code</label>
+                    <input class="col-sm-2 form-control-plantext" type="text" name="code" id="inputCode" placeholder="Code">
+                </div>
+                <div style="display: inline;">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                <div style="display: inline;">
+                    <button class="btn">Cancel</button>
+                </div>
+                
+            </fieldset>
+        </form>
+    </div>
+</div>
