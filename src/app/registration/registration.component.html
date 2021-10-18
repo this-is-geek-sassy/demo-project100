@@ -44,8 +44,14 @@
                 <!-- code block -->
                 <div class="form-group row">
                     <label for="inputCode">Code</label>
-                    <input class="col-sm-2 form-control-plantext" type="text" name="code" id="inputCode" placeholder="Code">
+                    <input class="col-sm-2 form-control-plantext" type="text" name="code" id="inputCode" placeholder="Code" formControlName="code">
                 </div>
+                <div *ngIf="code?.errors?.invalidCode&&code?.touched">
+                    <!-- error block -->
+                    Code is invalid 
+                </div>
+
+                <!-- buttons -->
                 <div style="display: inline;">
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
