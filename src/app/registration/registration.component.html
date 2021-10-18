@@ -38,8 +38,11 @@
                 <!-- Country block -->
                 <div class="form-group row">
                     <label for="inputCountry">Country</label>
-                    <input class="col-sm-2 form-control-plantext" type="text" name="country" id="inputCountry" placeholder="country">
+                    <input class="col-sm-2 form-control-plantext" type="text" name="country" id="inputCountry" placeholder="country" formControlName="country">
                 </div>
+                <ul *ngFor="let k of keys;">
+                    <li>{{k}}</li>
+                </ul>
 
                 <!-- code block -->
                 <div class="form-group row">
