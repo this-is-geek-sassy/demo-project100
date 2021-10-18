@@ -17,7 +17,10 @@
                         <label for="inputPassword">Password</label>
                         <input class="col-sm-2 form-control-plantext" type="password" name="password" id="inputPassword" placeholder="password" required minlength="6" ngModel #pwd="ngModel">
                     </div>
-                    <div *ngIf="pwd.invalid&&pwd.touched">Password is invalid</div>
+                    <div *ngIf="pwd.invalid&&pwd.touched">
+                        <div *ngIf="pwd.errors?.required">Password is mandetory</div>
+                        <div *ngIf="pwd.errors?.minlength">Password has to be min 6 chars</div>
+                    </div>
                 </div>
                 <!-- Gender block -->
                 <div class="form-group row">
