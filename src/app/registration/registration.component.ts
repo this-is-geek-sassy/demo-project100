@@ -20,13 +20,13 @@ export class RegistrationComponent implements OnInit {
       code: new FormControl('', [Validators.required, validCode]),
       country: new FormControl('', [Validators.required])
     })
+  }
+
+  ngOnInit(): void {
     this.signupForm.controls.country.valueChanges.subscribe(newkeyword=>{
       // Make an http call and fetch all countries with 'keyword'
       this.keys.push(newkeyword);
     })
-  }
-
-  ngOnInit(): void {
   }
   
   get password() {
