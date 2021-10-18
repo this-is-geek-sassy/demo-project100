@@ -8,4 +8,5 @@ input {
 form {
     border: 0.1px solid rgba(134, 64, 56, 0.226);
     width: 27rem;
+    padding: 2px;
 }
