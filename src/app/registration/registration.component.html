@@ -1,25 +1,28 @@
 <div>
     <div>
-        <form action="">
+        <form action="" [formGroup]="signupForm">
             <fieldset>
                 <legend>SignUP</legend>
 
                 <!-- Email block -->
                 <div class="form-group row">
                     <label for="inputEmail">Email</label>
-                    <input class="col-sm-2 form-control-plantext" aria-describedby="emailHelp" ngModel #email="ngModel" type="email" name="email" id="inputEmail" placeholder="Email" required>
+                    <input class="col-sm-2 form-control-plantext" aria-describedby="emailHelp" 
+                    type="text" name="email"
+                    id="inputEmail" 
+                    placeholder="Email" formControlName="email">
                 </div>
-                <div *ngIf="email.invalid&&email.touched">Email is invalid</div>
+                <div *ngIf="email?.invalid&&email?.touched">Email is invalid</div>
 
                 <!-- Password block -->
                 <div>
                     <div class="form-group row">
                         <label for="inputPassword">Password</label>
-                        <input class="col-sm-2 form-control-plantext" type="password" name="password" id="inputPassword" placeholder="password" required minlength="6" ngModel #pwd="ngModel">
+                        <input class="col-sm-2 form-control-plantext" type="password" name="password" id="inputPassword" placeholder="password" formControlName="password">
                     </div>
-                    <div *ngIf="pwd.invalid&&pwd.touched">
-                        <div *ngIf="pwd.errors?.required">Password is mandetory</div>
-                        <div *ngIf="pwd.errors?.minlength">Password has to be min 6 chars</div>
+                    <div *ngIf="signupForm.controls.password.invalid&&signupForm.controls.password.touched">
+                        <div *ngIf="password?.errors?.required">Password is mandetory</div>
+                        <div *ngIf="password?.errors?.minlength">Password has to be min 6 chars</div>
                     </div>
                 </div>
                 <!-- Gender block -->
@@ -54,3 +57,5 @@
         </form>
     </div>
 </div>
+
+<!-- {{ signup.value| json }} -->
